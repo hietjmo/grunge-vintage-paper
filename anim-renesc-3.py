@@ -135,11 +135,11 @@ def make_frame (start_x,big):
 
 def del_futile (start_x):
   global big
-  delete = []
+  futile = []
   for k,v in big.items():
     x,y = k
-    if (x < start_x): delete.append(k)
-  for k in delete:
+    if x < start_x: futile.append (k)
+  for k in futile:
     del big [k]
 
 print ("\nWhen the frames are ready, run:\n")
